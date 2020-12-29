@@ -1,5 +1,6 @@
 // created by: geo (March 2012)
 #include "udp.h"
+#include "pack.h"
 
 #ifdef IP_ONESBCAST
 
@@ -179,7 +180,7 @@ int udp_BroadcastString(char* p_String)
 	UDP_AddrTo.sin_addr.s_addr = UDP_BROADCAST_IPADDR;
 		
 #endif	
-	
+	//	printf("DEBUG sending: %s\n",p_String);  
 	// Send string to address to
 	if((sendto(*UDP_LocalSocket, p_String, strlen(p_String)+1, 0, (struct sockaddr*)&UDP_AddrTo, sizeof(UDP_AddrTo))) == -1)
 	{

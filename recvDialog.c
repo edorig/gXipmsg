@@ -1,5 +1,8 @@
 // created by: geo (April 2012)
 #include "recvDialog.h"
+#include "appIcon.h"
+#include "tcp.h"
+#include "pack.h"
 
 void recvDialog_AtExit(Widget w_Widget, XtPointer xp_Client_data, XtPointer xp_Call_data)
 {	

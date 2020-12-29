@@ -1,5 +1,6 @@
 // created by: geo (March 2012)
 #include "sendDialog.h"
+#include "udp.h"
 
 Boolean sendDialog_HaveItemsLeft(XtPointer client_data)
 {

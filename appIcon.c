@@ -1,5 +1,7 @@
 // created by: geo (April 2012)
 #include "appIcon.h"
+#include "sendDialog.h"
+#include "recvDialog.h"
 
 void appIcon_Init(Widget* w_TopLevel, int argc, char* argv[])
 {	
@@ -238,7 +240,7 @@ void appIcon_UpdateLists(struct NODE *llist, struct Broadcast_Packet* p_Item, ch
 }
 
 
-Boolean appIcon_SearchList(int* pNum, char* strPacket) 
+Boolean appIcon_SearchList(long* pNum, char* strPacket) 
 {
 	Boolean bRet = False;
 	struct NODE *llist = appLList;
@@ -249,7 +251,7 @@ Boolean appIcon_SearchList(int* pNum, char* strPacket)
 		{
 			if(strcmp(llist->ptrData->PacketID, strPacket) == 0)
 			{
-				*pNum = (int)llist->ptrData;
+				*pNum = (long)llist->ptrData;
 				bRet = True;
 				return bRet;
 			}			
@@ -261,7 +263,7 @@ Boolean appIcon_SearchList(int* pNum, char* strPacket)
 	{
 		if(strcmp(llist->ptrData->PacketID, strPacket) == 0)
 		{
-			*pNum = (int)llist->ptrData;
+			*pNum = (long)llist->ptrData;
 			bRet = True;
 		}		
 	}

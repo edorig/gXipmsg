@@ -1,6 +1,8 @@
 // created by: geo (March 2012)
-#include "main.h"
-
+// #include "main.h"
+#include "appIcon.h" 
+#include "tcp.h" 
+#include "udp.h"
 
 struct NODE* appLList;
 

@@ -43,8 +43,7 @@ char* pack_PackBroadcast(unsigned long m_Flags, char* p_username, char* p_hostna
 			pIdx++;
 			len++;
 		}
-	}	
-
+	}	 
 	return PACK_Full_Packet;
 }
 

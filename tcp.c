@@ -1,6 +1,9 @@
 // created by: geo (September 2012)
 #include "tcp.h"
-
+#include "udp.h" 
+#include "sendDialog.h"
+#include "pack.h"
+#include "appIcon.h"
 
 int tcp_InitClient(struct RecvClientData* data)
 {
@@ -178,7 +181,7 @@ void tcp_InquirePackets(void)
 	socklen_t clilen;
 	
 	struct SendClientData* pNum = NULL;
-	int addrNum = 0;
+	long addrNum = 0;
 	int mUserIdx = 0;
 	int mItemIdx = 0;	
 	struct stat st;
